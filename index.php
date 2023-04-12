@@ -75,7 +75,7 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
 <?php if($page){$page=$page;}else{$page="";}?>
 <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
     <div class="container">
-        <a href="../" class="navbar-brand">CPG Doc </a>
+        <a href="../" class="navbar-brand">CPG Doc V1.1</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
