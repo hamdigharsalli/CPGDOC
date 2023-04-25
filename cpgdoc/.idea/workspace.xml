@@ -302,4 +302,14 @@
       </provider>
     </entry>
   </component>
+
+  <Build>
+  <plugins>
+  <plugin>
+  <groupId>org.springframwork.boot</groupId>
+  <artifactId>spring-boot-maven-plugin</artifactId>
+  </plugins>
+  </plugins>
+  <finalName>devops-integration</finalName>
+  </Build>
 </project>
