@@ -1,16 +1,11 @@
-FROM composer:1.9.3 as vendor
+FROM php:7.4-apache
 
-WORKID /tmp/
-COPY composer.json composer.json
-COPY composer.lock composer.lock
+# Install required PHP extensions
+RUN docker-php-ext-install pdo_mysql mysqli
 
-RUN composer install \
---ignore-platform-reqs \
---no-interaction \
---no-plugins \
---no-scripts \
---prefer-dist
+# Copy project files to the container
+COPY . /var/www/html/
 
-FROM php:7.2-apache-stretch
-COPY ./var/www/html
-COPY --from=vendor /tmp/vendor/ /var/www/html/vendor/
+# Set permissions for Apache
+RUN chown -R www-data:www-data /var/www/html/
+
